@@ -16,7 +16,7 @@ local RunService       = game:GetService("RunService")
 local LP    = Players.LocalPlayer
 local Mouse = LP:GetMouse()
 
--- ── THEMES ───────────────────────────────────────
+-- ================================
 Flux.Themes = {
     Dark = {
         Bg         = Color3.fromRGB(15, 15, 20),
@@ -34,6 +34,1323 @@ Flux.Themes = {
         Notif      = Color3.fromRGB(22, 22, 30),
     },
     Neon = {
+        Bg         = Color3.fromRGB(4, 4, 10),
+        Surface    = Color3.fromRGB(8, 8, 18),
+        Card       = Color3.fromRGB(12, 12, 24),
+        Border     = Color3.fromRGB(0, 220, 160),
+        Accent     = Color3.fromRGB(0, 255, 180),
+        AccentDark = Color3.fromRGB(0, 180, 120),
+        Text       = Color3.fromRGB(0, 255, 180),
+        SubText    = Color3.fromRGB(0, 160, 110),
+        ToggleOn   = Color3.fromRGB(0, 255, 180),
+        ToggleOff  = Color3.fromRGB(15, 40, 30),
+        TabActive  = Color3.fromRGB(0, 255, 180),
+        TabInact   = Color3.fromRGB(12, 12, 24),
+        Notif      = Color3.fromRGB(8, 8, 18),
+    },
+    Rose = {
+        Bg         = Color3.fromRGB(18, 8, 12),
+        Surface    = Color3.fromRGB(26, 12, 18),
+        Card       = Color3.fromRGB(32, 16, 22),
+        Border     = Color3.fromRGB(244, 63, 94),
+        Accent     = Color3.fromRGB(244, 63, 94),
+        AccentDark = Color3.fromRGB(180, 40, 65),
+        Text       = Color3.fromRGB(255, 215, 225),
+        SubText    = Color3.fromRGB(180, 100, 120),
+        ToggleOn   = Color3.fromRGB(244, 63, 94),
+        ToggleOff  = Color3.fromRGB(60, 20, 30),
+        TabActive  = Color3.fromRGB(244, 63, 94),
+        TabInact   = Color3.fromRGB(32, 16, 22),
+        Notif      = Color3.fromRGB(26, 12, 18),
+    },
+    Midnight = {
+        Bg         = Color3.fromRGB(6, 6, 18),
+        Surface    = Color3.fromRGB(10, 10, 28),
+        Card       = Color3.fromRGB(14, 14, 36),
+        Border     = Color3.fromRGB(60, 80, 160),
+        Accent     = Color3.fromRGB(100, 140, 255),
+        AccentDark = Color3.fromRGB(70, 100, 200),
+        Text       = Color3.fromRGB(200, 215, 255),
+        SubText    = Color3.fromRGB(100, 120, 180),
+        ToggleOn   = Color3.fromRGB(100, 140, 255),
+        ToggleOff  = Color3.fromRGB(25, 25, 65),
+        TabActive  = Color3.fromRGB(100, 140, 255),
+        TabInact   = Color3.fromRGB(14, 14, 36),
+        Notif      = Color3.fromRGB(10, 10, 28),
+    },
+    Ocean = {
+        Bg         = Color3.fromRGB(4, 18, 32),
+        Surface    = Color3.fromRGB(6, 26, 46),
+        Card       = Color3.fromRGB(8, 34, 58),
+        Border     = Color3.fromRGB(0, 180, 220),
+        Accent     = Color3.fromRGB(0, 210, 250),
+        AccentDark = Color3.fromRGB(0, 150, 190),
+        Text       = Color3.fromRGB(170, 235, 255),
+        SubText    = Color3.fromRGB(80, 160, 200),
+        ToggleOn   = Color3.fromRGB(0, 210, 250),
+        ToggleOff  = Color3.fromRGB(8, 50, 75),
+        TabActive  = Color3.fromRGB(0, 210, 250),
+        TabInact   = Color3.fromRGB(8, 34, 58),
+        Notif      = Color3.fromRGB(6, 26, 46),
+    },
+    Blood = {
+        Bg         = Color3.fromRGB(14, 4, 4),
+        Surface    = Color3.fromRGB(22, 6, 6),
+        Card       = Color3.fromRGB(28, 8, 8),
+        Border     = Color3.fromRGB(180, 20, 20),
+        Accent     = Color3.fromRGB(220, 35, 35),
+        AccentDark = Color3.fromRGB(160, 20, 20),
+        Text       = Color3.fromRGB(255, 195, 195),
+        SubText    = Color3.fromRGB(170, 80, 80),
+        ToggleOn   = Color3.fromRGB(220, 35, 35),
+        ToggleOff  = Color3.fromRGB(55, 12, 12),
+        TabActive  = Color3.fromRGB(220, 35, 35),
+        TabInact   = Color3.fromRGB(28, 8, 8),
+        Notif      = Color3.fromRGB(22, 6, 6),
+    },
+    Gold = {
+        Bg         = Color3.fromRGB(14, 10, 4),
+        Surface    = Color3.fromRGB(22, 16, 6),
+        Card       = Color3.fromRGB(28, 20, 8),
+        Border     = Color3.fromRGB(200, 160, 40),
+        Accent     = Color3.fromRGB(240, 190, 50),
+        AccentDark = Color3.fromRGB(180, 140, 30),
+        Text       = Color3.fromRGB(255, 230, 170),
+        SubText    = Color3.fromRGB(170, 135, 60),
+        ToggleOn   = Color3.fromRGB(240, 190, 50),
+        ToggleOff  = Color3.fromRGB(50, 38, 10),
+        TabActive  = Color3.fromRGB(240, 190, 50),
+        TabInact   = Color3.fromRGB(28, 20, 8),
+        Notif      = Color3.fromRGB(22, 16, 6),
+    },
+    Pastel = {
+        Bg         = Color3.fromRGB(235, 228, 255),
+        Surface    = Color3.fromRGB(245, 240, 255),
+        Card       = Color3.fromRGB(255, 252, 255),
+        Border     = Color3.fromRGB(195, 175, 235),
+        Accent     = Color3.fromRGB(160, 120, 220),
+        AccentDark = Color3.fromRGB(130, 90, 190),
+        Text       = Color3.fromRGB(55, 35, 80),
+        SubText    = Color3.fromRGB(130, 110, 160),
+        ToggleOn   = Color3.fromRGB(160, 120, 220),
+        ToggleOff  = Color3.fromRGB(205, 195, 230),
+        TabActive  = Color3.fromRGB(160, 120, 220),
+        TabInact   = Color3.fromRGB(255, 252, 255),
+        Notif      = Color3.fromRGB(245, 240, 255),
+    },
+    Retro = {
+        Bg         = Color3.fromRGB(18, 12, 6),
+        Surface    = Color3.fromRGB(28, 20, 10),
+        Card       = Color3.fromRGB(36, 26, 12),
+        Border     = Color3.fromRGB(200, 140, 40),
+        Accent     = Color3.fromRGB(230, 165, 55),
+        AccentDark = Color3.fromRGB(170, 115, 30),
+        Text       = Color3.fromRGB(240, 205, 130),
+        SubText    = Color3.fromRGB(155, 120, 60),
+        ToggleOn   = Color3.fromRGB(230, 165, 55),
+        ToggleOff  = Color3.fromRGB(50, 36, 12),
+        TabActive  = Color3.fromRGB(230, 165, 55),
+        TabInact   = Color3.fromRGB(36, 26, 12),
+        Notif      = Color3.fromRGB(28, 20, 10),
+    },
+    Light = {
+        Bg         = Color3.fromRGB(242, 242, 248),
+        Surface    = Color3.fromRGB(252, 252, 255),
+        Card       = Color3.fromRGB(255, 255, 255),
+        Border     = Color3.fromRGB(210, 210, 228),
+        Accent     = Color3.fromRGB(79, 70, 229),
+        AccentDark = Color3.fromRGB(55, 48, 180),
+        Text       = Color3.fromRGB(18, 18, 30),
+        SubText    = Color3.fromRGB(100, 100, 130),
+        ToggleOn   = Color3.fromRGB(79, 70, 229),
+        ToggleOff  = Color3.fromRGB(200, 200, 220),
+        TabActive  = Color3.fromRGB(79, 70, 229),
+        TabInact   = Color3.fromRGB(255, 255, 255),
+        Notif      = Color3.fromRGB(252, 252, 255),
+    },
+}
+
+Flux._flags       = {}
+Flux._windows     = {}
+Flux._shortcuts   = {}
+Flux._theme       = nil
+
+-- ================================
+local function tw(obj, props, t, sty, dir)
+    TweenService:Create(obj, TweenInfo.new(t or 0.18, sty or Enum.EasingStyle.Quart, dir or Enum.EasingDirection.Out), props):Play()
+end
+
+local function corner(p, r)
+    local c = Instance.new("UICorner")
+    c.CornerRadius = UDim.new(0, r or 8)
+    c.Parent = p
+    return c
+end
+
+local function stroke(p, col, thick)
+    local s = Instance.new("UIStroke")
+    s.Color = col
+    s.Thickness = thick or 1
+    s.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+    s.Parent = p
+    return s
+end
+
+local function pad(p, top, left, right, bot)
+    local u = Instance.new("UIPadding")
+    u.PaddingTop    = UDim.new(0, top   or 0)
+    u.PaddingLeft   = UDim.new(0, left  or 0)
+    u.PaddingRight  = UDim.new(0, right or 0)
+    u.PaddingBottom = UDim.new(0, bot   or 0)
+    u.Parent = p
+end
+
+local function list(p, gap, hor)
+    local l = Instance.new("UIListLayout")
+    l.SortOrder = Enum.SortOrder.LayoutOrder
+    l.Padding   = UDim.new(0, gap or 6)
+    if hor then l.FillDirection = Enum.FillDirection.Horizontal end
+    l.Parent = p
+    return l
+end
+
+local function draggable(win, handle)
+    local drag, ds, sp = false, nil, nil
+    handle.InputBegan:Connect(function(i)
+        if i.UserInputType == Enum.UserInputType.MouseButton1 then
+            drag = true; ds = i.Position; sp = win.Position
+        end
+    end)
+    UserInputService.InputChanged:Connect(function(i)
+        if drag and i.UserInputType == Enum.UserInputType.MouseMove then
+            local d = i.Position - ds
+            win.Position = UDim2.new(sp.X.Scale, sp.X.Offset + d.X, sp.Y.Scale, sp.Y.Offset + d.Y)
+        end
+    end)
+    UserInputService.InputEnded:Connect(function(i)
+        if i.UserInputType == Enum.UserInputType.MouseButton1 then drag = false end
+    end)
+end
+
+local function getRoot()
+    local r = LP.PlayerGui:FindFirstChild("FluxRoot")
+    if r then return r end
+    local sg = Instance.new("ScreenGui")
+    sg.Name = "FluxRoot"
+    sg.ResetOnSpawn = false
+    sg.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    sg.DisplayOrder = 999
+    sg.IgnoreGuiInset = true
+    sg.Parent = LP.PlayerGui
+    return sg
+end
+
+-- ================================
+local _nc
+
+local function getNc(root)
+    if _nc and _nc.Parent then return _nc end
+    local f = Instance.new("Frame")
+    f.Name = "NC"
+    f.Size = UDim2.new(0, 270, 1, -20)
+    f.Position = UDim2.new(1, -278, 0, 10)
+    f.BackgroundTransparency = 1
+    f.Parent = root
+    local l = list(f, 8)
+    l.VerticalAlignment = Enum.VerticalAlignment.Bottom
+    _nc = f
+    return f
+end
+
+function Flux:Notify(opts)
+    opts = opts or {}
+    local t  = Flux._theme or Flux.Themes.Dark
+    local nc = getNc(getRoot())
+
+    local card = Instance.new("Frame")
+    card.Size = UDim2.new(1, 0, 0, 72)
+    card.BackgroundColor3 = t.Surface
+    card.BorderSizePixel = 0
+    card.ClipsDescendants = true
+    card.Parent = nc
+    corner(card, 12)
+    stroke(card, t.Border, 1)
+
+    -- left accent stripe
+    local stripe = Instance.new("Frame")
+    stripe.Size = UDim2.new(0, 3, 1, 0)
+    stripe.BackgroundColor3 = t.Accent
+    stripe.BorderSizePixel = 0
+    stripe.Parent = card
+    corner(stripe, 2)
+
+    local tl = Instance.new("TextLabel")
+    tl.Size = UDim2.new(1, -18, 0, 22)
+    tl.Position = UDim2.new(0, 14, 0, 10)
+    tl.BackgroundTransparency = 1
+    tl.Text = opts.Title or "Notification"
+    tl.TextColor3 = t.Text
+    tl.Font = Enum.Font.GothamBold
+    tl.TextSize = 13
+    tl.TextXAlignment = Enum.TextXAlignment.Left
+    tl.Parent = card
+
+    local dl = Instance.new("TextLabel")
+    dl.Size = UDim2.new(1, -18, 0, 28)
+    dl.Position = UDim2.new(0, 14, 0, 34)
+    dl.BackgroundTransparency = 1
+    dl.Text = opts.Description or ""
+    dl.TextColor3 = t.SubText
+    dl.Font = Enum.Font.Gotham
+    dl.TextSize = 11
+    dl.TextXAlignment = Enum.TextXAlignment.Left
+    dl.TextWrapped = true
+    dl.Parent = card
+
+    local dur = opts.Duration or 4
+    local prog = Instance.new("Frame")
+    prog.Size = UDim2.new(1, 0, 0, 2)
+    prog.Position = UDim2.new(0, 0, 1, -2)
+    prog.BackgroundColor3 = t.Accent
+    prog.BorderSizePixel = 0
+    prog.Parent = card
+
+    card.Position = UDim2.new(1, 10, 0, 0)
+    tw(card, {Position = UDim2.new(0, 0, 0, 0)}, 0.28)
+    tw(prog, {Size = UDim2.new(0, 0, 0, 2)}, dur, Enum.EasingStyle.Linear)
+
+    task.delay(dur, function()
+        tw(card, {Position = UDim2.new(1, 10, 0, 0)}, 0.25)
+        task.wait(0.28)
+        card:Destroy()
+    end)
+end
+
+-- ================================
+function Flux:Dialog(opts)
+    opts = opts or {}
+    local t    = Flux._theme or Flux.Themes.Dark
+    local root = getRoot()
+    local btns = opts.Buttons or {{Title = "OK"}}
+
+    local ov = Instance.new("Frame")
+    ov.Size = UDim2.new(1, 0, 1, 0)
+    ov.BackgroundColor3 = Color3.new(0, 0, 0)
+    ov.BackgroundTransparency = 0.45
+    ov.ZIndex = 200
+    ov.Parent = root
+
+    local card = Instance.new("Frame")
+    card.Size = UDim2.new(0, 310, 0, 150 + #btns * 42)
+    card.AnchorPoint = Vector2.new(0.5, 0.5)
+    card.Position = UDim2.new(0.5, 0, 0.5, 0)
+    card.BackgroundColor3 = t.Card
+    card.BorderSizePixel = 0
+    card.ZIndex = 201
+    card.Parent = ov
+    corner(card, 14)
+    stroke(card, t.Border, 1)
+
+    local ttl = Instance.new("TextLabel")
+    ttl.Size = UDim2.new(1, -20, 0, 28)
+    ttl.Position = UDim2.new(0, 14, 0, 14)
+    ttl.BackgroundTransparency = 1
+    ttl.Text = opts.Title or "Dialog"
+    ttl.TextColor3 = t.Text
+    ttl.Font = Enum.Font.GothamBold
+    ttl.TextSize = 15
+    ttl.TextXAlignment = Enum.TextXAlignment.Left
+    ttl.ZIndex = 202
+    ttl.Parent = card
+
+    local desc = Instance.new("TextLabel")
+    desc.Size = UDim2.new(1, -20, 0, 50)
+    desc.Position = UDim2.new(0, 14, 0, 48)
+    desc.BackgroundTransparency = 1
+    desc.Text = opts.Description or ""
+    desc.TextColor3 = t.SubText
+    desc.Font = Enum.Font.Gotham
+    desc.TextSize = 12
+    desc.TextWrapped = true
+    desc.TextXAlignment = Enum.TextXAlignment.Left
+    desc.ZIndex = 202
+    desc.Parent = card
+
+    for i, b in ipairs(btns) do
+        local btn = Instance.new("TextButton")
+        btn.Size = UDim2.new(1, -20, 0, 34)
+        btn.Position = UDim2.new(0, 10, 0, 104 + (i - 1) * 40)
+        btn.BackgroundColor3 = t.Accent
+        btn.BorderSizePixel = 0
+        btn.Text = b.Title or "OK"
+        btn.TextColor3 = Color3.new(1, 1, 1)
+        btn.Font = Enum.Font.GothamBold
+        btn.TextSize = 13
+        btn.ZIndex = 202
+        btn.Parent = card
+        corner(btn, 10)
+        btn.MouseButton1Click:Connect(function()
+            ov:Destroy()
+            if b.Callback then b.Callback() end
+        end)
+        btn.MouseEnter:Connect(function() tw(btn, {BackgroundColor3 = t.AccentDark}, 0.12) end)
+        btn.MouseLeave:Connect(function() tw(btn, {BackgroundColor3 = t.Accent}, 0.12) end)
+    end
+end
+
+-- ================================
+local _sc
+
+local function getScContainer(root)
+    if _sc and _sc.Parent then return _sc end
+    local f = Instance.new("Frame")
+    f.Name = "SC"
+    f.Size = UDim2.new(0, 42, 1, -100)
+    f.Position = UDim2.new(0, 8, 0, 50)
+    f.BackgroundTransparency = 1
+    f.Parent = root
+    list(f, 8)
+    _sc = f
+    return f
+end
+
+function Flux:AddShortcut(opts)
+    opts = opts or {}
+    local t   = Flux._theme or Flux.Themes.Dark
+    local con = getScContainer(getRoot())
+    local st  = opts.Value or false
+    local ico = opts.Icon or string.sub(opts.Title or "?", 1, 2)
+
+    local circ = Instance.new("TextButton")
+    circ.Size = UDim2.new(0, 38, 0, 38)
+    circ.BackgroundColor3 = st and t.Accent or t.Card
+    circ.BorderSizePixel = 0
+    circ.Text = ico
+    circ.TextColor3 = st and Color3.new(1,1,1) or t.SubText
+    circ.Font = Enum.Font.GothamBold
+    circ.TextSize = 13
+    circ.Parent = con
+    corner(circ, 19)
+    local cstroke = stroke(circ, st and t.Accent or t.Border, 1.5)
+
+    -- tooltip
+    local tip = Instance.new("TextLabel")
+    tip.Size = UDim2.new(0, 110, 0, 24)
+    tip.Position = UDim2.new(1, 8, 0.5, -12)
+    tip.BackgroundColor3 = t.Card
+    tip.BorderSizePixel = 0
+    tip.Text = opts.Title or ""
+    tip.TextColor3 = t.Text
+    tip.Font = Enum.Font.Gotham
+    tip.TextSize = 11
+    tip.Visible = false
+    tip.ZIndex = 300
+    tip.Parent = circ
+    corner(tip, 6)
+    stroke(tip, t.Border, 1)
+
+    circ.MouseEnter:Connect(function() tip.Visible = true end)
+    circ.MouseLeave:Connect(function() tip.Visible = false end)
+    circ.MouseButton1Click:Connect(function()
+        st = not st
+        tw(circ, {BackgroundColor3 = st and t.Accent or t.Card}, 0.15)
+        tw(circ, {TextColor3 = st and Color3.new(1,1,1) or t.SubText}, 0.15)
+        cstroke.Color = st and t.Accent or t.Border
+        if opts.Flag then Flux._flags[opts.Flag] = st end
+        if opts.Callback then opts.Callback(st) end
+    end)
+    return circ
+end
+
+-- ================================
+function Flux:CreateWindow(opts)
+    opts = opts or {}
+    local title  = opts.Title or "Flux"
+    local theme  = opts.CustomTheme or Flux.Themes[opts.Theme] or Flux.Themes.Dark
+    Flux._theme  = theme
+    local winW   = 540
+    local winH   = 400
+    local root   = getRoot()
+
+    -- WINDOW
+    local win = Instance.new("Frame")
+    win.Name = "FluxWin"
+    win.Size = UDim2.new(0, winW, 0, winH)
+    win.Position = opts.Position or UDim2.new(0.5, -winW/2, 0.5, -winH/2)
+    win.BackgroundColor3 = theme.Bg
+    win.BorderSizePixel = 0
+    win.ClipsDescendants = false
+    win.Parent = root
+    corner(win, 14)
+    stroke(win, theme.Border, 1)
+
+    -- subtle inner shadow / depth frame
+    local depth = Instance.new("Frame")
+    depth.Size = UDim2.new(1, -2, 1, -2)
+    depth.Position = UDim2.new(0, 1, 0, 1)
+    depth.BackgroundTransparency = 1
+    depth.BorderSizePixel = 0
+    depth.Parent = win
+    corner(depth, 13)
+
+    -- TITLEBAR
+    local tbar = Instance.new("Frame")
+    tbar.Name = "TBar"
+    tbar.Size = UDim2.new(1, 0, 0, 46)
+    tbar.BackgroundColor3 = theme.Surface
+    tbar.BorderSizePixel = 0
+    tbar.Parent = win
+    corner(tbar, 14)
+
+    -- fix tbar bottom corners
+    local tbfix = Instance.new("Frame")
+    tbfix.Size = UDim2.new(1, 0, 0, 14)
+    tbfix.Position = UDim2.new(0, 0, 1, -14)
+    tbfix.BackgroundColor3 = theme.Surface
+    tbfix.BorderSizePixel = 0
+    tbfix.Parent = tbar
+
+    -- accent line under titlebar
+    local acline = Instance.new("Frame")
+    acline.Size = UDim2.new(1, 0, 0, 1)
+    acline.Position = UDim2.new(0, 0, 1, 0)
+    acline.BackgroundColor3 = theme.Border
+    acline.BorderSizePixel = 0
+    acline.Parent = tbar
+
+    -- logo dot
+    local dot = Instance.new("Frame")
+    dot.Size = UDim2.new(0, 10, 0, 10)
+    dot.Position = UDim2.new(0, 14, 0.5, -5)
+    dot.BackgroundColor3 = theme.Accent
+    dot.BorderSizePixel = 0
+    dot.Parent = tbar
+    corner(dot, 5)
+
+    local titleLbl = Instance.new("TextLabel")
+    titleLbl.Size = UDim2.new(0.5, 0, 1, 0)
+    titleLbl.Position = UDim2.new(0, 32, 0, 0)
+    titleLbl.BackgroundTransparency = 1
+    titleLbl.Text = title
+    titleLbl.TextColor3 = theme.Text
+    titleLbl.Font = Enum.Font.GothamBold
+    titleLbl.TextSize = 14
+    titleLbl.TextXAlignment = Enum.TextXAlignment.Left
+    titleLbl.Parent = tbar
+
+    -- window controls
+    local function winBtn(xoff, col, lbl)
+        local b = Instance.new("TextButton")
+        b.Size = UDim2.new(0, 24, 0, 24)
+        b.Position = UDim2.new(1, xoff, 0.5, -12)
+        b.BackgroundColor3 = col
+        b.BorderSizePixel = 0
+        b.Text = lbl
+        b.TextColor3 = Color3.new(1, 1, 1)
+        b.Font = Enum.Font.GothamBold
+        b.TextSize = 11
+        b.Parent = tbar
+        corner(b, 12)
+        return b
+    end
+
+    local closeB = winBtn(-32, Color3.fromRGB(255, 80, 80), "✕")
+    local minB   = winBtn(-60, Color3.fromRGB(255, 185, 40), "–")
+
+    draggable(win, tbar)
+
+    -- BODY
+    local body = Instance.new("Frame")
+    body.Name = "Body"
+    body.Size = UDim2.new(1, 0, 1, -46)
+    body.Position = UDim2.new(0, 0, 0, 46)
+    body.BackgroundTransparency = 1
+    body.ClipsDescendants = true
+    body.Parent = win
+
+    -- SIDEBAR (Wind UI style pill tabs)
+    local sidebar = Instance.new("Frame")
+    sidebar.Name = "Sidebar"
+    sidebar.Size = UDim2.new(0, 120, 1, 0)
+    sidebar.BackgroundColor3 = theme.Surface
+    sidebar.BorderSizePixel = 0
+    sidebar.Parent = body
+    -- sidebar right border
+    local sbLine = Instance.new("Frame")
+    sbLine.Size = UDim2.new(0, 1, 1, 0)
+    sbLine.Position = UDim2.new(1, 0, 0, 0)
+    sbLine.BackgroundColor3 = theme.Border
+    sbLine.BorderSizePixel = 0
+    sbLine.Parent = sidebar
+
+    local sbScroll = Instance.new("ScrollingFrame")
+    sbScroll.Size = UDim2.new(1, 0, 1, 0)
+    sbScroll.BackgroundTransparency = 1
+    sbScroll.BorderSizePixel = 0
+    sbScroll.ScrollBarThickness = 0
+    sbScroll.CanvasSize = UDim2.new(0, 0, 0, 0)
+    sbScroll.AutomaticCanvasSize = Enum.AutomaticSize.Y
+    sbScroll.Parent = sidebar
+    list(sbScroll, 4)
+    pad(sbScroll, 10, 8, 8, 10)
+
+    -- CONTENT
+    local content = Instance.new("Frame")
+    content.Name = "Content"
+    content.Size = UDim2.new(1, -120, 1, 0)
+    content.Position = UDim2.new(0, 120, 0, 0)
+    content.BackgroundTransparency = 1
+    content.ClipsDescendants = true
+    content.Parent = body
+
+    local tabs    = {}
+    local actTab  = nil
+
+    -- close / minimize
+    local minimized = false
+    closeB.MouseButton1Click:Connect(function()
+        tw(win, {Size = UDim2.new(0, winW, 0, 0)}, 0.2)
+        task.wait(0.22)
+        win:Destroy()
+    end)
+    minB.MouseButton1Click:Connect(function()
+        minimized = not minimized
+        if minimized then
+            body.Visible = false
+            tw(win, {Size = UDim2.new(0, winW, 0, 46)}, 0.2)
+        else
+            body.Visible = true
+            tw(win, {Size = UDim2.new(0, winW, 0, winH)}, 0.2)
+        end
+    end)
+
+    -- ================================
+    local W = {}
+
+    function W:SetTheme(name, custom)
+        theme = custom or Flux.Themes[name] or theme
+        Flux._theme = theme
+        win.BackgroundColor3    = theme.Bg
+        tbar.BackgroundColor3   = theme.Surface
+        tbfix.BackgroundColor3  = theme.Surface
+        sidebar.BackgroundColor3 = theme.Surface
+        sbLine.BackgroundColor3 = theme.Border
+        acline.BackgroundColor3 = theme.Border
+        dot.BackgroundColor3    = theme.Accent
+        titleLbl.TextColor3     = theme.Text
+    end
+
+    function W:Tab(topts)
+        topts = topts or {}
+        local tname = topts.Title or "Tab"
+        local ticon = topts.Icon  or ""
+
+        -- PILL TAB BUTTON (Wind UI style)
+        local pill = Instance.new("TextButton")
+        pill.Size = UDim2.new(1, 0, 0, 36)
+        pill.BackgroundColor3 = theme.TabInact
+        pill.BorderSizePixel = 0
+        pill.Text = ""
+        pill.Parent = sbScroll
+        corner(pill, 10)
+
+        -- icon + label inside pill
+        local pillRow = Instance.new("Frame")
+        pillRow.Size = UDim2.new(1, 0, 1, 0)
+        pillRow.BackgroundTransparency = 1
+        pillRow.Parent = pill
+        list(pillRow, 6, true)
+        pad(pillRow, 0, 10, 10, 0)
+
+        local pillIcon = Instance.new("TextLabel")
+        pillIcon.Size = UDim2.new(0, 18, 1, 0)
+        pillIcon.BackgroundTransparency = 1
+        pillIcon.Text = ticon
+        pillIcon.TextColor3 = theme.SubText
+        pillIcon.Font = Enum.Font.GothamBold
+        pillIcon.TextSize = 14
+        pillIcon.Parent = pillRow
+
+        local pillLbl = Instance.new("TextLabel")
+        pillLbl.Size = UDim2.new(1, -28, 1, 0)
+        pillLbl.BackgroundTransparency = 1
+        pillLbl.Text = tname
+        pillLbl.TextColor3 = theme.SubText
+        pillLbl.Font = Enum.Font.Gotham
+        pillLbl.TextSize = 13
+        pillLbl.TextXAlignment = Enum.TextXAlignment.Left
+        pillLbl.Parent = pillRow
+
+        -- active indicator bar
+        local indic = Instance.new("Frame")
+        indic.Size = UDim2.new(0, 3, 0.6, 0)
+        indic.Position = UDim2.new(0, -3, 0.2, 0)
+        indic.BackgroundColor3 = theme.Accent
+        indic.BorderSizePixel = 0
+        indic.Visible = false
+        indic.Parent = pill
+        corner(indic, 2)
+
+        -- PAGE
+        local page = Instance.new("ScrollingFrame")
+        page.Name = "Page_" .. tname
+        page.Size = UDim2.new(1, 0, 1, 0)
+        page.BackgroundTransparency = 1
+        page.BorderSizePixel = 0
+        page.ScrollBarThickness = 3
+        page.ScrollBarImageColor3 = theme.Accent
+        page.CanvasSize = UDim2.new(0, 0, 0, 0)
+        page.AutomaticCanvasSize = Enum.AutomaticSize.Y
+        page.Visible = false
+        page.Parent = content
+        list(page, 6)
+        pad(page, 12, 12, 12, 12)
+
+        local tdata = {Pill = pill, Page = page, Icon = pillIcon, Lbl = pillLbl, Indic = indic}
+        table.insert(tabs, tdata)
+
+        local function select()
+            for _, td in ipairs(tabs) do
+                td.Page.Visible = false
+                td.Indic.Visible = false
+                tw(td.Pill, {BackgroundColor3 = theme.TabInact}, 0.15)
+                tw(td.Icon, {TextColor3 = theme.SubText}, 0.15)
+                tw(td.Lbl,  {TextColor3 = theme.SubText,  Font = Enum.Font.Gotham}, 0.15)
+            end
+            page.Visible = true
+            indic.Visible = true
+            actTab = tdata
+            tw(pill, {BackgroundColor3 = theme.TabActive}, 0.15)
+            tw(pillIcon, {TextColor3 = Color3.new(1, 1, 1)}, 0.15)
+            tw(pillLbl,  {TextColor3 = Color3.new(1, 1, 1)}, 0.15)
+        end
+
+        pill.MouseButton1Click:Connect(select)
+        if #tabs == 1 then select() end
+
+        -- ================================
+        local T = {}
+
+        -- helper: make a card row
+        local function card(h)
+            local f = Instance.new("Frame")
+            f.Size = UDim2.new(1, 0, 0, h or 38)
+            f.BackgroundColor3 = theme.Card
+            f.BorderSizePixel = 0
+            f.Parent = page
+            corner(f, 10)
+            stroke(f, theme.Border, 1)
+            return f
+        end
+
+        function T:Section(o)
+            o = o or {}
+            local f = Instance.new("Frame")
+            f.Size = UDim2.new(1, 0, 0, 26)
+            f.BackgroundTransparency = 1
+            f.Parent = page
+
+            local lbl = Instance.new("TextLabel")
+            lbl.Size = UDim2.new(1, 0, 0, 16)
+            lbl.Position = UDim2.new(0, 0, 0, 8)
+            lbl.BackgroundTransparency = 1
+            lbl.Text = string.upper(o.Title or "Section")
+            lbl.TextColor3 = theme.Accent
+            lbl.Font = Enum.Font.GothamBold
+            lbl.TextSize = 10
+            lbl.TextXAlignment = Enum.TextXAlignment.Left
+            lbl.Parent = f
+
+            local line = Instance.new("Frame")
+            line.Size = UDim2.new(1, 0, 0, 1)
+            line.Position = UDim2.new(0, 0, 1, -1)
+            line.BackgroundColor3 = theme.Border
+            line.BorderSizePixel = 0
+            line.Parent = f
+        end
+
+        function T:Label(o)
+            o = o or {}
+            local lbl = Instance.new("TextLabel")
+            lbl.Size = UDim2.new(1, 0, 0, 20)
+            lbl.BackgroundTransparency = 1
+            lbl.Text = o.Title or ""
+            lbl.TextColor3 = o.Color or theme.SubText
+            lbl.Font = Enum.Font.Gotham
+            lbl.TextSize = 12
+            lbl.TextXAlignment = Enum.TextXAlignment.Left
+            lbl.TextWrapped = true
+            lbl.AutomaticSize = Enum.AutomaticSize.Y
+            lbl.Parent = page
+            return {Set = function(_, v) lbl.Text = v end}
+        end
+
+        function T:Button(o)
+            o = o or {}
+            local c = card(38)
+
+            -- accent left border
+            local ab = Instance.new("Frame")
+            ab.Size = UDim2.new(0, 3, 0.6, 0)
+            ab.Position = UDim2.new(0, 0, 0.2, 0)
+            ab.BackgroundColor3 = theme.Accent
+            ab.BorderSizePixel = 0
+            ab.Parent = c
+            corner(ab, 2)
+
+            local btn = Instance.new("TextButton")
+            btn.Size = UDim2.new(1, 0, 1, 0)
+            btn.BackgroundTransparency = 1
+            btn.Text = o.Title or "Button"
+            btn.TextColor3 = theme.Text
+            btn.Font = Enum.Font.GothamBold
+            btn.TextSize = 13
+            btn.Parent = c
+
+            btn.MouseEnter:Connect(function() tw(c, {BackgroundColor3 = theme.Border}, 0.1) end)
+            btn.MouseLeave:Connect(function() tw(c, {BackgroundColor3 = theme.Card}, 0.1) end)
+            btn.MouseButton1Click:Connect(function()
+                tw(c, {BackgroundColor3 = theme.Accent}, 0.08)
+                task.wait(0.1)
+                tw(c, {BackgroundColor3 = theme.Card}, 0.12)
+                if o.Callback then o.Callback() end
+            end)
+        end
+
+        function T:Toggle(o)
+            o = o or {}
+            local st = o.Value or false
+            if o.Flag and Flux._flags[o.Flag] ~= nil then st = Flux._flags[o.Flag] end
+            local c = card(38)
+
+            local lbl = Instance.new("TextLabel")
+            lbl.Size = UDim2.new(1, -70, 1, 0)
+            lbl.Position = UDim2.new(0, 14, 0, 0)
+            lbl.BackgroundTransparency = 1
+            lbl.Text = o.Title or "Toggle"
+            lbl.TextColor3 = theme.Text
+            lbl.Font = Enum.Font.Gotham
+            lbl.TextSize = 13
+            lbl.TextXAlignment = Enum.TextXAlignment.Left
+            lbl.Parent = c
+
+            -- track (pill shaped)
+            local track = Instance.new("Frame")
+            track.Size = UDim2.new(0, 42, 0, 22)
+            track.Position = UDim2.new(1, -54, 0.5, -11)
+            track.BackgroundColor3 = st and theme.ToggleOn or theme.ToggleOff
+            track.BorderSizePixel = 0
+            track.Parent = c
+            corner(track, 11)
+
+            local knob = Instance.new("Frame")
+            knob.Size = UDim2.new(0, 18, 0, 18)
+            knob.Position = st and UDim2.new(1, -20, 0.5, -9) or UDim2.new(0, 2, 0.5, -9)
+            knob.BackgroundColor3 = Color3.new(1, 1, 1)
+            knob.BorderSizePixel = 0
+            knob.Parent = track
+            corner(knob, 9)
+
+            local function upd()
+                tw(track, {BackgroundColor3 = st and theme.ToggleOn or theme.ToggleOff}, 0.15)
+                tw(knob, {Position = st and UDim2.new(1, -20, 0.5, -9) or UDim2.new(0, 2, 0.5, -9)}, 0.15)
+            end
+
+            local detect = Instance.new("TextButton")
+            detect.Size = UDim2.new(1, 0, 1, 0)
+            detect.BackgroundTransparency = 1
+            detect.Text = ""
+            detect.Parent = c
+            detect.MouseButton1Click:Connect(function()
+                st = not st
+                upd()
+                if o.Flag then Flux._flags[o.Flag] = st end
+                if o.Callback then o.Callback(st) end
+            end)
+
+            upd()
+            return {
+                GetState = function() return st end,
+                Set = function(_, v) st = v upd() if o.Flag then Flux._flags[o.Flag] = st end end
+            }
+        end
+
+        function T:Slider(o)
+            o = o or {}
+            local mn  = o.Min   or 0
+            local mx  = o.Max   or 100
+            local stp = o.Step  or 1
+            local val = o.Value or mn
+            if o.Flag and Flux._flags[o.Flag] then val = Flux._flags[o.Flag] end
+
+            local c = card(54)
+
+            local lbl = Instance.new("TextLabel")
+            lbl.Size = UDim2.new(0.65, 0, 0, 22)
+            lbl.Position = UDim2.new(0, 14, 0, 6)
+            lbl.BackgroundTransparency = 1
+            lbl.Text = o.Title or "Slider"
+            lbl.TextColor3 = theme.Text
+            lbl.Font = Enum.Font.Gotham
+            lbl.TextSize = 13
+            lbl.TextXAlignment = Enum.TextXAlignment.Left
+            lbl.Parent = c
+
+            local vlbl = Instance.new("TextLabel")
+            vlbl.Size = UDim2.new(0.35, -14, 0, 22)
+            vlbl.Position = UDim2.new(0.65, 0, 0, 6)
+            vlbl.BackgroundTransparency = 1
+            vlbl.Text = tostring(val)
+            vlbl.TextColor3 = theme.Accent
+            vlbl.Font = Enum.Font.GothamBold
+            vlbl.TextSize = 13
+            vlbl.TextXAlignment = Enum.TextXAlignment.Right
+            vlbl.Parent = c
+
+            local track = Instance.new("Frame")
+            track.Size = UDim2.new(1, -28, 0, 5)
+            track.Position = UDim2.new(0, 14, 0, 38)
+            track.BackgroundColor3 = theme.ToggleOff
+            track.BorderSizePixel = 0
+            track.Parent = c
+            corner(track, 3)
+
+            local fill = Instance.new("Frame")
+            fill.Size = UDim2.new((val - mn) / (mx - mn), 0, 1, 0)
+            fill.BackgroundColor3 = theme.Accent
+            fill.BorderSizePixel = 0
+            fill.Parent = track
+            corner(fill, 3)
+
+            -- thumb
+            local thumb = Instance.new("Frame")
+            thumb.Size = UDim2.new(0, 12, 0, 12)
+            thumb.Position = UDim2.new((val - mn) / (mx - mn), -6, 0.5, -6)
+            thumb.BackgroundColor3 = Color3.new(1, 1, 1)
+            thumb.BorderSizePixel = 0
+            thumb.Parent = track
+            corner(thumb, 6)
+
+            local drag = false
+            track.InputBegan:Connect(function(i)
+                if i.UserInputType == Enum.UserInputType.MouseButton1 then drag = true end
+            end)
+            UserInputService.InputEnded:Connect(function(i)
+                if i.UserInputType == Enum.UserInputType.MouseButton1 then drag = false end
+            end)
+            UserInputService.InputChanged:Connect(function(i)
+                if drag and i.UserInputType == Enum.UserInputType.MouseMove then
+                    local rel = math.clamp((Mouse.X - track.AbsolutePosition.X) / track.AbsoluteSize.X, 0, 1)
+                    val = math.clamp(math.round((mn + rel * (mx - mn)) / stp) * stp, mn, mx)
+                    local pct = (val - mn) / (mx - mn)
+                    fill.Size = UDim2.new(pct, 0, 1, 0)
+                    thumb.Position = UDim2.new(pct, -6, 0.5, -6)
+                    vlbl.Text = tostring(val)
+                    if o.Flag then Flux._flags[o.Flag] = val end
+                    if o.Callback then o.Callback(val) end
+                end
+            end)
+
+            return {GetValue = function() return val end}
+        end
+
+        function T:Dropdown(o)
+            o = o or {}
+            local items = o.Items or {}
+            local sel   = o.Value or items[1] or "Select..."
+            local open  = false
+
+            local c = card(38)
+            c.ClipsDescendants = false
+
+            local detect = Instance.new("TextButton")
+            detect.Size = UDim2.new(1, 0, 1, 0)
+            detect.BackgroundTransparency = 1
+            detect.Text = ""
+            detect.Parent = c
+
+            local lbl = Instance.new("TextLabel")
+            lbl.Size = UDim2.new(0.55, 0, 1, 0)
+            lbl.Position = UDim2.new(0, 14, 0, 0)
+            lbl.BackgroundTransparency = 1
+            lbl.Text = o.Title or "Dropdown"
+            lbl.TextColor3 = theme.Text
+            lbl.Font = Enum.Font.Gotham
+            lbl.TextSize = 13
+            lbl.TextXAlignment = Enum.TextXAlignment.Left
+            lbl.Parent = c
+
+            local sellbl = Instance.new("TextLabel")
+            sellbl.Size = UDim2.new(0.45, -34, 1, 0)
+            sellbl.Position = UDim2.new(0.55, 0, 0, 0)
+            sellbl.BackgroundTransparency = 1
+            sellbl.Text = sel
+            sellbl.TextColor3 = theme.Accent
+            sellbl.Font = Enum.Font.GothamBold
+            sellbl.TextSize = 12
+            sellbl.TextXAlignment = Enum.TextXAlignment.Right
+            sellbl.Parent = c
+
+            local arrow = Instance.new("TextLabel")
+            arrow.Size = UDim2.new(0, 22, 1, 0)
+            arrow.Position = UDim2.new(1, -24, 0, 0)
+            arrow.BackgroundTransparency = 1
+            arrow.Text = "▾"
+            arrow.TextColor3 = theme.SubText
+            arrow.Font = Enum.Font.GothamBold
+            arrow.TextSize = 14
+            arrow.Parent = c
+
+            local dd = Instance.new("Frame")
+            dd.Size = UDim2.new(1, 0, 0, #items * 30 + 8)
+            dd.Position = UDim2.new(0, 0, 1, 4)
+            dd.BackgroundColor3 = theme.Card
+            dd.BorderSizePixel = 0
+            dd.Visible = false
+            dd.ZIndex = 50
+            dd.Parent = c
+            corner(dd, 10)
+            stroke(dd, theme.Border, 1)
+            list(dd, 2)
+            pad(dd, 4, 4, 4, 4)
+
+            for _, item in ipairs(items) do
+                local ib = Instance.new("TextButton")
+                ib.Size = UDim2.new(1, 0, 0, 28)
+                ib.BackgroundColor3 = theme.Card
+                ib.BorderSizePixel = 0
+                ib.Text = item
+                ib.TextColor3 = theme.Text
+                ib.Font = Enum.Font.Gotham
+                ib.TextSize = 12
+                ib.ZIndex = 51
+                ib.Parent = dd
+                corner(ib, 7)
+                ib.MouseEnter:Connect(function() tw(ib, {BackgroundColor3 = theme.Accent, TextColor3 = Color3.new(1,1,1)}, 0.1) end)
+                ib.MouseLeave:Connect(function() tw(ib, {BackgroundColor3 = theme.Card, TextColor3 = theme.Text}, 0.1) end)
+                ib.MouseButton1Click:Connect(function()
+                    sel = item
+                    sellbl.Text = sel
+                    dd.Visible = false
+                    open = false
+                    tw(arrow, {Rotation = 0}, 0.15)
+                    if o.Flag then Flux._flags[o.Flag] = sel end
+                    if o.Callback then o.Callback(sel) end
+                end)
+            end
+
+            detect.MouseButton1Click:Connect(function()
+                open = not open
+                dd.Visible = open
+                tw(arrow, {Rotation = open and 180 or 0}, 0.15)
+            end)
+
+            return {GetValue = function() return sel end}
+        end
+
+        function T:Input(o)
+            o = o or {}
+            local c = card(54)
+
+            local lbl = Instance.new("TextLabel")
+            lbl.Size = UDim2.new(1, -14, 0, 18)
+            lbl.Position = UDim2.new(0, 14, 0, 6)
+            lbl.BackgroundTransparency = 1
+            lbl.Text = o.Title or "Input"
+            lbl.TextColor3 = theme.SubText
+            lbl.Font = Enum.Font.Gotham
+            lbl.TextSize = 10
+            lbl.TextXAlignment = Enum.TextXAlignment.Left
+            lbl.Parent = c
+
+            local box = Instance.new("TextBox")
+            box.Size = UDim2.new(1, -28, 0, 22)
+            box.Position = UDim2.new(0, 14, 0, 26)
+            box.BackgroundColor3 = theme.Bg
+            box.BorderSizePixel = 0
+            box.Text = o.Value or ""
+            box.PlaceholderText = o.Placeholder or "Type here..."
+            box.TextColor3 = theme.Text
+            box.PlaceholderColor3 = theme.SubText
+            box.Font = Enum.Font.Gotham
+            box.TextSize = 12
+            box.TextXAlignment = Enum.TextXAlignment.Left
+            box.ClearTextOnFocus = o.ClearOnFocus or false
+            box.Parent = c
+            corner(box, 6)
+
+            box.FocusLost:Connect(function(enter)
+                if o.Callback then o.Callback(box.Text, enter) end
+                if o.Flag then Flux._flags[o.Flag] = box.Text end
+            end)
+            return {GetValue = function() return box.Text end, Set = function(_, v) box.Text = v end}
+        end
+
+        function T:Keybind(o)
+            o = o or {}
+            local key = o.Value or Enum.KeyCode.Unknown
+            local listening = false
+            local c = card(38)
+
+            local lbl = Instance.new("TextLabel")
+            lbl.Size = UDim2.new(0.6, 0, 1, 0)
+            lbl.Position = UDim2.new(0, 14, 0, 0)
+            lbl.BackgroundTransparency = 1
+            lbl.Text = o.Title or "Keybind"
+            lbl.TextColor3 = theme.Text
+            lbl.Font = Enum.Font.Gotham
+            lbl.TextSize = 13
+            lbl.TextXAlignment = Enum.TextXAlignment.Left
+            lbl.Parent = c
+
+            local kb = Instance.new("TextButton")
+            kb.Size = UDim2.new(0, 76, 0, 24)
+            kb.Position = UDim2.new(1, -86, 0.5, -12)
+            kb.BackgroundColor3 = theme.Bg
+            kb.BorderSizePixel = 0
+            kb.Text = key == Enum.KeyCode.Unknown and "None" or key.Name
+            kb.TextColor3 = theme.Accent
+            kb.Font = Enum.Font.GothamBold
+            kb.TextSize = 11
+            kb.Parent = c
+            corner(kb, 8)
+
+            kb.MouseButton1Click:Connect(function()
+                listening = true
+                kb.Text = "..."
+                kb.TextColor3 = theme.SubText
+            end)
+            UserInputService.InputBegan:Connect(function(i)
+                if listening and i.UserInputType == Enum.UserInputType.Keyboard then
+                    key = i.KeyCode
+                    kb.Text = key.Name
+                    kb.TextColor3 = theme.Accent
+                    listening = false
+                    if o.Callback then o.Callback(key) end
+                    if o.Flag then Flux._flags[o.Flag] = key end
+                end
+            end)
+            return {GetValue = function() return key end}
+        end
+
+        function T:ColorPicker(o)
+            o = o or {}
+            local col = o.Value or Color3.fromRGB(255, 255, 255)
+            local c = card(38)
+            c.ClipsDescendants = false
+
+            local lbl = Instance.new("TextLabel")
+            lbl.Size = UDim2.new(0.7, 0, 1, 0)
+            lbl.Position = UDim2.new(0, 14, 0, 0)
+            lbl.BackgroundTransparency = 1
+            lbl.Text = o.Title or "Color"
+            lbl.TextColor3 = theme.Text
+            lbl.Font = Enum.Font.Gotham
+            lbl.TextSize = 13
+            lbl.TextXAlignment = Enum.TextXAlignment.Left
+            lbl.Parent = c
+
+            local prev = Instance.new("Frame")
+            prev.Size = UDim2.new(0, 26, 0, 18)
+            prev.Position = UDim2.new(1, -34, 0.5, -9)
+            prev.BackgroundColor3 = col
+            prev.BorderSizePixel = 0
+            prev.Parent = c
+            corner(prev, 5)
+            stroke(prev, theme.Border, 1)
+
+            local popOpen = false
+            local pop
+
+            local det = Instance.new("TextButton")
+            det.Size = UDim2.new(1, 0, 1, 0)
+            det.BackgroundTransparency = 1
+            det.Text = ""
+            det.Parent = c
+
+            det.MouseButton1Click:Connect(function()
+                popOpen = not popOpen
+                if pop then pop:Destroy() pop = nil end
+                if not popOpen then return end
+                pop = Instance.new("Frame")
+                pop.Size = UDim2.new(1, 0, 0, 108)
+                pop.Position = UDim2.new(0, 0, 1, 4)
+                pop.BackgroundColor3 = theme.Card
+                pop.BorderSizePixel = 0
+                pop.ZIndex = 60
+                pop.Parent = c
+                corner(pop, 10)
+                stroke(pop, theme.Border, 1)
+
+                local vals = {col.R*255, col.G*255, col.B*255}
+                local chs  = {"R","G","B"}
+                for i, ch in ipairs(chs) do
+                    local row = Instance.new("Frame")
+                    row.Size = UDim2.new(1, -16, 0, 26)
+                    row.Position = UDim2.new(0, 8, 0, 6 + (i-1)*32)
+                    row.BackgroundTransparency = 1
+                    row.ZIndex = 61
+                    row.Parent = pop
+
+                    local cl = Instance.new("TextLabel")
+                    cl.Size = UDim2.new(0, 14, 1, 0)
+                    cl.BackgroundTransparency = 1
+                    cl.Text = ch
+                    cl.TextColor3 = theme.SubText
+                    cl.Font = Enum.Font.GothamBold
+                    cl.TextSize = 11
+                    cl.ZIndex = 62
+                    cl.Parent = row
+
+                    local bx = Instance.new("TextBox")
+                    bx.Size = UDim2.new(1, -20, 1, 0)
+                    bx.Position = UDim2.new(0, 18, 0, 0)
+                    bx.BackgroundColor3 = theme.Bg
+                    bx.BorderSizePixel = 0
+                    bx.Text = tostring(math.round(vals[i]))
+                    bx.TextColor3 = theme.Text
+                    bx.Font = Enum.Font.Gotham
+                    bx.TextSize = 11
+                    bx.ZIndex = 62
+                    bx.Parent = row
+                    corner(bx, 5)
+
+                    bx.FocusLost:Connect(function()
+                        vals[i] = math.clamp(tonumber(bx.Text) or vals[i], 0, 255)
+                        bx.Text = tostring(math.round(vals[i]))
+                        col = Color3.fromRGB(vals[1], vals[2], vals[3])
+                        prev.BackgroundColor3 = col
+                        if o.Callback then o.Callback(col) end
+                        if o.Flag then Flux._flags[o.Flag] = col end
+                    end)
+                end
+            end)
+            return {GetValue = function() return col end}
+        end
+
+        function T:Shortcut(o)
+            return Flux:AddShortcut(o)
+        end
+
+        return T
+    end
+
+    -- KEY SYSTEM
+    function W:KeySystem(o)
+        o = o or {}
+        local t    = Flux._theme or Flux.Themes.Dark
+        local keys = o.Keys or {}
+        local ov   = Instance.new("Frame")
+        ov.Size = UDim2.new(1, 0, 1, 0)
+        ov.BackgroundColor3 = Color3.new(0, 0, 0)
+        ov.BackgroundTransparency = 0.4
+        ov.ZIndex = 500
+        ov.Parent = root
+
+        local kcard = Instance.new("Frame")
+        kcard.Size = UDim2.new(0, 300, 0, 148)
+        kcard.AnchorPoint = Vector2.new(0.5, 0.5)
+        kcard.Position = UDim2.new(0.5, 0, 0.5, 0)
+        kcard.BackgroundColor3 = t.Card
+        kcard.BorderSizePixel = 0
+        kcard.ZIndex = 501
+        kcard.Parent = ov
+        corner(kcard, 14)
+        stroke(kcard, t.Accent, 1)
+
+        local ktl = Instance.new("TextLabel")
+        ktl.Size = UDim2.new(1, -20, 0, 26)
+        ktl.Position = UDim2.new(0, 12, 0, 12)
+        ktl.BackgroundTransparency = 1
+        ktl.Text = o.Title or "🔑 Key Required"
+        ktl.TextColor3 = t.Text
+        ktl.Font = Enum.Font.GothamBold
+        ktl.TextSize = 14
+        ktl.TextXAlignment = Enum.TextXAlignment.Left
+        ktl.ZIndex = 502
+        ktl.Parent = kcard
+
+        local kbox = Instance.new("TextBox")
+        kbox.Size = UDim2.new(1, -20, 0, 30)
+        kbox.Position = UDim2.new(0, 10, 0, 46)
+        kbox.BackgroundColor3 = t.Bg
+        kbox.BorderSizePixel = 0
+        kbox.Text = ""
+        kbox.PlaceholderText = "Enter key..."
+        kbox.TextColor3 = t.Text
+        kbox.PlaceholderColor3 = t.SubText
+        kbox.Font = Enum.Font.Gotham
+        kbox.TextSize = 12
+        kbox.ZIndex = 502
+        kbox.Parent = kcard
+        corner(kbox, 8)
+
+        local kerr = Instance.new("TextLabel")
+        kerr.Size = UDim2.new(1, -20, 0, 16)
+        kerr.Position = UDim2.new(0, 12, 0, 82)
+        kerr.BackgroundTransparency = 1
+        kerr.Text = ""
+        kerr.TextColor3 = Color3.fromRGB(240, 60, 60)
+        kerr.Font = Enum.Font.Gotham
+        kerr.TextSize = 11
+        kerr.TextXAlignment = Enum.TextXAlignment.Left
+        kerr.ZIndex = 502
+        kerr.Parent = kcard
+
+        local ksub = Instance.new("TextButton")
+        ksub.Size = UDim2.new(1, -20, 0, 30)
+        ksub.Position = UDim2.new(0, 10, 0, 104)
+        ksub.BackgroundColor3 = t.Accent
+        ksub.BorderSizePixel = 0
+        ksub.Text = "Submit"
+        ksub.TextColor3 = Color3.new(1, 1, 1)
+        ksub.Font = Enum.Font.GothamBold
+        ksub.TextSize = 13
+        ksub.ZIndex = 502
+        ksub.Parent = kcard
+        corner(ksub, 10)
+
+        ksub.MouseButton1Click:Connect(function()
+            local valid = false
+            for _, k in ipairs(keys) do if k == kbox.Text then valid = true break end end
+            if valid then
+                ov:Destroy()
+                if o.Callback then o.Callback(true, kbox.Text) end
+            else
+                kerr.Text = "❌ Invalid key."
+                kbox.Text = ""
+                if o.Callback then o.Callback(false, kbox.Text) end
+            end
+        end)
+        return ov
+    end
+
+    function W:SaveConfig(name)
+        name = name or "Flux_Config"
+        local ok, data = pcall(HttpService.JSONEncode, HttpService, Flux._flags)
+        if ok then pcall(writefile, name..".json", data) end
+    end
+
+    function W:LoadConfig(name)
+        name = name or "Flux_Config"
+        local ok, data = pcall(readfile, name..".json")
+        if ok and data then
+            local ok2, dec = pcall(HttpService.JSONDecode, HttpService, data)
+            if ok2 then for k, v in pairs(dec) do Flux._flags[k] = v end end
+        end
+    end
+
+    table.insert(Flux._windows, W)
+    return W
+end
+
+function Flux:Destroy()
+    local r = LP.PlayerGui:FindFirstChild("FluxRoot")
+    if r then r:Destroy() end
+    Flux._windows, Flux._shortcuts, Flux._flags = {}, {}, {}
+end
+
+return Flux
         Bg         = Color3.fromRGB(4, 4, 10),
         Surface    = Color3.fromRGB(8, 8, 18),
         Card       = Color3.fromRGB(12, 12, 24),
